@@ -1,0 +1,24 @@
+{
+  "name": "full-stack-accessibility",
+  "version": "1.0.0",
+  "description": "An example application for a full stack accessibility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfroDevGirl/full-stack-accessibility.git"
+  },
+  "keywords": [],
+  "author": "Alexis Ewing-Moody",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfroDevGirl/full-stack-accessibility/issues"
+  },
+  "homepage": "https://github.com/AfroDevGirl/full-stack-accessibility#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
