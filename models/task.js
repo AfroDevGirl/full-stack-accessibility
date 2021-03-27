@@ -16,7 +16,13 @@ module.exports = (sequelize, DataTypes) => {
       title: DataTypes.STRING,
       description: DataTypes.STRING,
       dueAt: DataTypes.DATE,
-      userId: DataTypes.INTEGER,
+      UserId: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "User",
+          key: "id",
+        },
+      },
     },
     {
       sequelize,
