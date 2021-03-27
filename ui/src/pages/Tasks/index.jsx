@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useEffect, useState } from "react";
 
-function App() {
+const Tasks = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,8 +11,8 @@ function App() {
 
   const renderTask = (task) => {
     return (
-      <div>
-        <h4>{task?.title}</h4>
+      <div key={task?.title}>
+        <h2>{task?.title}</h2>
         <p>{task?.description}</p>
         <p>{task?.dueDate?.toString()}</p>
       </div>
@@ -21,10 +20,11 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>{!data ? "Loading..." : data.map(renderTask)}</div>
-    </div>
+    <>
+      <h1>All Tasks</h1>
+      <div>{!data.length ? "Loading..." : data.map(renderTask)}</div>
+    </>
   );
-}
+};
 
-export default App;
+export default Tasks;
