@@ -4,7 +4,7 @@ import { InputGroup, Input, InputRightElement, Button } from "@chakra-ui/react";
 const PasswordInput = (props) => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
-  const hasError = props.errors.password && props.touched.password;
+  const hasError = props?.errors?.password && props?.touched?.password;
 
   return (
     <InputGroup size="md">
@@ -16,7 +16,7 @@ const PasswordInput = (props) => {
         {...props}
         isInvalid={hasError}
         aria-describedby={hasError ? "firstName-error" : null}
-        aria-required="true"
+        isRequired
       />
       <InputRightElement width="4.5rem">
         <Button h="1.75rem" size="sm" onClick={handleClick}>

@@ -66,7 +66,11 @@ const Login = () => {
                 {({ field, form }) => (
                   <FormControl id="password">
                     <FormLabel>Password:</FormLabel>
-                    <PasswordInput {...field} {...form} />
+                    <PasswordInput
+                      {...field}
+                      errors={form.errors}
+                      touched={form.touched}
+                    />
                     <ErrorMessage name="password">
                       {(msg) => (
                         <FormErrorMessage id="password-error">
